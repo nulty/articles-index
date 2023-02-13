@@ -7,7 +7,7 @@ The project was initialized with `rails new articles-index -c tailwind -d sqlite
 
 # Getting Started
 
-Start the server with `bin/rails s`
+Start the server with `bin/dev`
 
 ## Run Tests
 
@@ -35,4 +35,11 @@ rails g model Article original_id:integer title description:text location:json v
 ```
 
 With the model created I can test the implementation. I can create a `articles.json` fixture and test that we can save each article to the datastore. One issue will be mapping the `id`, `created_at` and `updated_at` to original_*
+
+### Frontend
+I've never used tailwindcss so I'll use this for styling the articles index page.
+
+The page will list the title, description, photo, user avatar, user name and the number of likes the article has. Once the UI is styled I will begin adding the frontend behavour of liking an article.
+
+
 
