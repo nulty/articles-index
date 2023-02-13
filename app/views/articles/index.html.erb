@@ -15,9 +15,9 @@
         <img class="h-8 rounded-full" src="<%=article.user['current_avatar']['small']%>" alt=""/>
         <%= article.user['first_name'] %>
       </div>
-      <div class="likes flex flex-row items-center gap-2">
+      <div data-controller="likes" data-action="click->likes#increment" class="likes flex flex-row items-center gap-2 hover:cursor-pointer">
         <%= fa_icon 'regular heart' %>
-        <div class="likes-icon">
+        <div data-likes-target="count" class="likes-count">
           <%= article.reactions['likes'] %>
         </div>
       </div>
