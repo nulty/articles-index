@@ -1,0 +1,21 @@
+<div class="block">
+  <h1 class="font-bold text-4xl">Articles From OLIO</h1>
+</div>
+
+<div class="flex flex-row flex-wrap justify-between w-full gap-2 shadow-xl">
+<% @articles.each do |article| %>
+  <div class="article flex-initial border-solid border-2 p-4 mb-8 basis-64 border-indigo-200 rounded-lg">
+    <h2 class="text-xl py-2 h-16"><%= article.title %></h2>
+    <div class="text-sm my-4 h-16">
+      <%= article.description %>
+    </div>
+    <img class="h-36 w-full object-cover object-center my-2" src="<%= article.photos.first['files']['original'] %>" alt=""/>
+    <div class="details flex flex-row gap-2">
+      <img class="h-8 rounded-full" src="<%=article.user['current_avatar']['small']%>" alt=""/>
+      <%= article.user['first_name'] %>
+      <%= article.reactions['likes'] %>
+    </div>
+  </div>
+<% end %>
+
+</div>
