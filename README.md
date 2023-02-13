@@ -8,6 +8,7 @@ The project was initialized with `rails new articles-index -c tailwind -d sqlite
 # Getting Started
 
 Start the server with `bin/dev`
+Visit http://localhost:3000/articles
 
 ## Run Tests
 
@@ -40,6 +41,3 @@ With the model created I can test the implementation. I can create a `articles.j
 I've never used tailwindcss so I'll use this for styling the articles index page.
 
 The page will list the title, description, photo, user avatar, user name and the number of likes the article has. Once the UI is styled I will begin adding the frontend behavour of liking an article.
-
-
-
