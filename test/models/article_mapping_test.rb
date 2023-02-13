@@ -22,5 +22,7 @@ class ArticleMappingTest < ActiveSupport::TestCase
     article_data = JSON.parse(json).first
     mapped = ArticleMapping.new(article_data).call
     assert_equal mapped['user'], @user
+    assert_equal mapped['original_id'], 3_899_631
+    assert_equal mapped['section'], nil
   end
 end
