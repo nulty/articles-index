@@ -75,3 +75,7 @@ The only behaviour in the UI is allowing the User to click on an articles likes 
 
 This was implemented using [Stimulus](https://stimulus.hotwired.dev/). A `LikesController`.js handles the clicks and the HTML directives in the `index.html.erb`.
 
+
+### Screenshot
+
+![articles-screenshot](https://user-images.githubusercontent.com/556209/218525720-ba4f39a1-c06e-4137-9bee-eae62475e764.png)
