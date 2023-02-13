@@ -23,7 +23,6 @@ class ArticleMapping
     description
     location
     value
-    section
     status
     expiry
     reactions
@@ -45,6 +44,6 @@ class ArticleMapping
 
   # select only the properties we expect from the article_hash
   def filter
-    @article_hash.slice(*PROPERTIES)
+    @article_hash.slice!(*PROPERTIES)
   end
 end
