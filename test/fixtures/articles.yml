@@ -13,8 +13,16 @@ one:
   reactions: {
     'likes': 2
    }
-  photos:
-  user:
+  photos: [
+    {
+      'files': {
+        'original': 'https://via.placeholder.com/150/FFFF00/000000?Text=WebsiteBuilders.com'
+      }
+    }
+  ]
+  user: {
+    'first_name': 'Bob',
+    'current_avatar': { 'small': 'https://via.placeholder.com/150/FFFF00/000000?Text=WebsiteBuilders.com'}}
 
 two:
   original_id: 1
@@ -29,5 +37,13 @@ two:
   reactions: {
     'likes': 2
    }
-  photos:
-  user:
+  photos: [
+    {
+      'files': {
+        'original': 'https://via.placeholder.com/150/FFFF00/000000?Text=WebsiteBuilders.com'
+      }
+    }
+  ]
+  user: {
+    'first_name': 'Bob',
+    'current_avatar': { 'small': 'https://via.placeholder.com/150/FFFF00/000000?Text=WebsiteBuilders.com'}}
