@@ -4,7 +4,7 @@
 
 <div class="flex flex-row flex-wrap justify-between w-full gap-2 shadow-xl">
 <% @articles.each do |article| %>
-  <div class="article flex-initial border-solid border-2 p-4 mb-8 basis-64 border-indigo-200 rounded-lg">
+  <div data-controller="likes" data-id="<%= article.id %>" data-likes-target="article" class="article flex-initial border-solid border-2 p-4 mb-8 basis-64 border-indigo-200 rounded-lg">
     <h2 class="text-xl py-2 h-16"><%= article.title %></h2>
     <div class="text-sm my-4 h-16">
       <%= article.description %>
@@ -15,7 +15,7 @@
         <img class="h-8 rounded-full" src="<%=article.user['current_avatar']['small']%>" alt=""/>
         <%= article.user['first_name'] %>
       </div>
-      <div data-controller="likes" data-action="click->likes#increment" class="likes flex flex-row items-center gap-2 hover:cursor-pointer">
+      <div data-action="click->likes#increment" class="likes flex flex-row items-center gap-2 hover:cursor-pointer">
         <%= fa_icon 'regular heart' %>
         <div data-likes-target="count" class="likes-count">
           <%= article.reactions['likes'] %>
